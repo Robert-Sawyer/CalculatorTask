@@ -15,7 +15,6 @@ class CalculationExecutorTest {
 
         //when
         String operation = "apply 10";
-        String[] commandArr = operation.split(" ");
 
         //then
         assertEquals(10, calculationExecutor.analyzeOperation(operation));
@@ -42,7 +41,6 @@ class CalculationExecutorTest {
 
         int currentNumber = 1;
         String operation = "";
-        String[] commandArr = operation.split(" ");
 
         assertThrows(IllegalArgumentException.class, () -> calculationExecutor.executeOperation(currentNumber, operation));
     }
